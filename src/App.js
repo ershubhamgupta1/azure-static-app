@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './App.css';
 
 function App() {
@@ -7,6 +8,10 @@ function App() {
       .then(data => console.log("data=======", data));
 
   }
+
+  useEffect(()=>{
+    fetchProducts();
+  }, [])
   return (
     <div className="App">
       <h1>Hello ALl, from Azure Static app</h1>
