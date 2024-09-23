@@ -3,7 +3,9 @@ import './App.css';
 
 function App() {
   const fetchProducts = ()=>{
-    fetch('http://40.90.240.250/products')
+    fetch('http://40.90.240.250/products', {
+      mode: 'no-cors'
+    })
       .then(response => response.json())
       .then(data => console.log("data=======", data));
 
