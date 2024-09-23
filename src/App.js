@@ -1,6 +1,12 @@
 import './App.css';
 
 function App() {
+  const fetchProducts = ()=>{
+    fetch('http://40.90.240.250/products')
+      .then(response => response.json())
+      .then(data => console.log("data=======", data));
+
+  }
   return (
     <div className="App">
       <h1>Hello ALl, from Azure Static app</h1>
